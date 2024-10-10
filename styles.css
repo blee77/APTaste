@@ -1,0 +1,1227 @@
+/* Import Google Fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Pacifico&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+/* Reset Styles */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+img{
+   
+    /* width: 20%;
+    height: 10%;
+    mix-blend-mode: multiply; /* Blend logo background with container */
+    
+}
+
+
+
+
+/* General Styles */
+body {
+/* font-family: 'Poppins', sans-serif; */
+font-family: 'Audiowide', sans-serif;
+background-color: #fdfaf6;
+color: #333;
+overflow-x: hidden;
+}
+
+/* Hero Section */
+header {
+position: relative;
+background: linear-gradient(135deg, #18c870 0%, #c4fac8 100%);
+color: white;
+text-align: center;
+padding: 100px 20px;
+}
+
+.hero-image{
+border-radius: 5%;
+}
+
+
+.hero-content {
+
+position: relative;
+z-index: 2;
+}
+
+header h1 {
+/* font-family: 'Pacifico', cursive; */
+font-family: 'Audiowide', sans-serif;
+font-size: 3em;
+margin-bottom: 20px;
+}
+
+header p {
+font-size: 1.2em;
+margin-bottom: 10px;
+}
+
+.cta-button {
+background-color: #ff6f61;
+color: white;
+padding: 15px 30px;
+border: none;
+border-radius: 50px;
+font-size: 1.1em;
+cursor: pointer;
+text-decoration: none;
+transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+background-color: #ff9478;
+transform: translateY(-5px);
+}
+
+/* Wave Dividers */
+.wave {
+position: relative;
+width: 100%;
+height: 100px;
+overflow: hidden;
+}
+
+#wave-top {
+top: -1px;
+}
+
+#wave-top::before {
+content: "";
+display: block;
+position: absolute;
+width: 200%;
+height: 100%;
+background: url('images/wave-top.svg') no-repeat;
+background-size: cover;
+}
+
+#wave-middle {
+transform: rotate(180deg);
+margin-bottom: -5px;
+}
+
+#wave-middle::before {
+content: "";
+display: block;
+position: absolute;
+width: 200%;
+height: 100%;
+background: url('images/wave-middle.svg') no-repeat;
+background-size: cover;
+}
+
+#wave-bottom {
+transform: rotate(0deg);
+margin-top: -5px;
+}
+
+#wave-bottom::before {
+content: "";
+display: block;
+position: absolute;
+width: 200%;
+height: 100%;
+background: url('images/wave-bottom.svg') no-repeat;
+background-size: cover;
+}
+
+/* User Types Section */
+.user-types {
+background-color: #fdfaf6;
+padding: 60px 20px;
+text-align: center;
+}
+
+.user-types h2 {
+font-size: 2.5em;
+margin-bottom: 40px;
+color: #18c870;
+}
+
+.user-type-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
+}
+
+.user-type {
+background-color: white;
+border-radius: 20px;
+padding: 30px;
+width: 280px;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+transition: transform 0.3s, box-shadow 0.3s;
+text-align: center;
+}
+
+.user-type img {
+width: 80px;
+margin-bottom: 20px;
+}
+
+.user-type h3 {
+font-size: 1.5em;
+margin-bottom: 15px;
+color: #333;
+}
+
+.user-type p {
+font-size: 1em;
+margin-bottom: 20px;
+color: #666;
+}
+
+.user-type .learn-more {
+background-color: #18c870;
+color: white;
+padding: 10px 25px;
+border-radius: 50px;
+text-decoration: none;
+font-size: 1em;
+transition: background-color 0.3s;
+}
+
+.user-type .learn-more:hover {
+background-color: #ff9478;
+}
+
+.user-type:hover {
+transform: translateY(-10px);
+box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+background-color: #4e4e4e;
+color: white;
+text-align: center;
+padding: 20px;
+font-size: 0.9em;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.user-type-container,
+.features {
+flex-direction: column;
+}
+
+.user-type,
+.features .feature {
+width: 100%;
+}
+
+header h1 {
+font-size: 2.2em;
+}
+
+.user-types h2,
+.features h2 {
+font-size: 2em;
+}
+}
+
+
+/* Updated Color Scheme */
+:root {
+--primary-color: #18c870;
+/* Vivid red for main actions */
+--secondary-color: #18c870; /* Bright green for highlights */
+--accent-color: #ffa07a; /* Soft coral for accents */
+--background-light: #f9f9f9; /* Light background for sections */
+--background-dark: #4e4e4e; /* Dark footer background */
+--text-dark: #333; /* Dark text */
+--text-light: #fff; /* Light text */
+}
+
+/* Hero Section */
+header {
+background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+color: var(--text-light);
+padding: 20px 20px;
+text-align: center;
+margin-bottom: 0;
+}
+
+header h1 {
+/* font-family: 'Pacifico', cursive; */
+font-family: 'Audiowide', sans-serif;
+font-size: 3.5em;
+margin-bottom: 20px;
+color: var(--text-light);
+}
+
+/* CTA Button */
+.cta-button {
+background-color: var(--primary-color);
+color: white;
+padding: 15px 30px;
+border-radius: 50px;
+font-size: 1.2em;
+text-transform: uppercase;
+transition: all 0.3s ease;
+}
+
+/* Country Selector */
+.country-selector {
+text-align: right;
+margin: 20px;
+/* margin: 100px 0 0 0;
+padding: 0,0,0,0; */
+
+
+}
+
+.country-selector label {
+font-size: 1.2em;
+margin-right: 10px;
+/* margin-bottom: 0px;
+padding-bottom: 0px; */
+}
+
+.country-selector select {
+padding: 8px 12px;
+font-size: 1em;
+border-radius: 5px;
+border: 1px solid #ccc;
+cursor: pointer;
+}
+
+.country-selector select:hover {
+border-color: #18c870;
+}
+
+
+
+
+
+
+/* Make sections stand out */
+.standout-section {
+  background-color: #5ef45e; /* A vibrant green color to stand out */
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.standout-section:hover {
+  transform: scale(1.05); /* Add a zoom effect on hover */
+}
+
+.standout-section img {
+  width: 100px; /* Resize the icon */
+  margin-bottom: 10px;
+}
+
+.standout-section h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.standout-section p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* CTA Button for Standout Sections */
+.cta-button-referral {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button-referral:hover {
+  background-color: #555; /* Darker color on hover */
+}
+
+
+
+
+
+
+/* How It Works Section Styles */
+.how-it-works {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h2.how-it-works {
+  color: #18c870; /* Change to your desired RGB values */
+}
+
+
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
+  width: calc(33% - 40px); /* Responsive width */
+  box-sizing: border-box; /* Prevents padding from affecting width */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Float effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-family: 'Audiowide', sans-serif;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card p {
+  color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .card {
+      width: calc(50% - 40px); /* Two cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      width: calc(100% - 40px); /* One card per row on very small screens */
+  }
+}
+
+
+
+/* New - How it works Css */
+
+
+/* General Styling for How it Works Cards */
+.how-it-works-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 400px;
+  display: inline-block;
+  vertical-align: top;
+  width: calc(33.333% - 40px);
+  position: relative; 
+  /* Ensure hover stays relative to its space */
+} 
+
+/* Hover effect for cards - Stretch and Magnify */
+.how-it-works-card:hover { */
+  transform: scale(1.1); 
+  /* Magnifies the card */
+  z-index: 10;
+   /* Ensures card stays above other elements */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+   Darker, larger shadow
+} 
+
+/* Specific Styling for GIVE Card */
+.give-card {
+  background-color: #ffe066;
+  border-left: 5px solid #ffb400;
+  color: #333;
+}
+
+/* Styling for card headers */
+.how-it-works-card h3 {
+  color: #18c870;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* Styling for card paragraphs */
+.how-it-works-card p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Responsive Design for How it Works Cards */
+@media screen and (max-width: 768px) {
+  .how-it-works-card {
+      width: calc(50% - 40px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .how-it-works-card {
+      width: 100%;
+      margin: 10px 0;
+  }
+}
+
+
+
+/* 
+Updated 1 How it works section */
+
+
+/* General Styling for How it Works Cards */
+.how-it-works-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, font-size 0.4s ease;
+  width: 300px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  display: inline-block;
+  margin: 20px;
+  text-align: center; /* Center the content */
+  position: relative;
+}
+
+/* Hover effect for cards - Stretch towards the center and increase size */
+.how-it-works-card:hover {
+  transform: scale(1) translate(-10%, -10%); /* Magnifies and moves toward center */
+  z-index: 10; /* Keeps the hovered card above others */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Larger shadow for depth */
+}
+
+/* Increase text size on hover */
+.how-it-works-card:hover h3, 
+.how-it-works-card:hover p {
+  /* font-size: 1.6rem; */
+   /* Increase text size on hover */
+}
+
+/* Styling for card headers */
+.how-it-works-card h3 {
+  color: #18c870;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  transition: font-size 0.4s ease; /* Smooth transition for text size */
+}
+
+/* Styling for card paragraphs */
+.how-it-works-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+  transition: font-size 0.4s ease;
+}
+
+/* Responsive Design for How it Works Cards */
+@media screen and (max-width: 768px) {
+  .how-it-works-card {
+      width: 250px;
+      height: 250px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .how-it-works-card {
+      width: 100%;
+      height: auto;
+  }
+}
+
+/* 
+Updated 2 How it works section */
+
+/* Container for the cards - Use Flexbox to center */
+.how-it-works-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+  padding: 20px; /* Adds some padding around the container */
+  box-sizing: border-box;
+}
+
+/* General Styling for How it Works Cards */
+.how-it-works-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  width: 300px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Hover effect for cards - Stretch towards the center and increase size */
+.how-it-works-card:hover {
+  /* Magnifies and moves toward center */
+  transform: scale(1) translate(-1%, -1%); 
+  z-index: 10; /* Keeps the hovered card above others */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Larger shadow for depth */
+}
+
+
+/* Static text size (no change on hover) */
+.how-it-works-card h3, 
+.how-it-works-card p {
+  font-size: 1.4rem; /* Fixed text size for headers */
+  color: #333;
+  line-height: 1.4;
+  transition: none; /* No transition for text */
+}
+
+/* Styling for card headers */
+.how-it-works-card h3 {
+  color: #18c870;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design for How it Works Cards */
+@media screen and (max-width: 768px) {
+  .how-it-works-card {
+      width: 250px;
+      height: 250px; 
+  } 
+}
+
+@media screen and (max-width: 480px) {
+  .how-it-works-card {
+      width: 100%;
+      height: auto;
+  }
+}
+
+/* 
+header{
+
+ 
+  background-image: url("images/spices.jpeg");
+ 
+} */
+
+/* .features{
+
+  background-image: url("images/garlic.jpeg");
+} */
+
+ 
+/* Header with Dark Tint */
+ header {
+  position: relative;
+  background-image: url("images/spices.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  color: white;
+} 
+
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark tint */
+  z-index: 1; 
+  /* Keeps tint below content */
+} 
+
+header .logo, header nav {
+  position: relative;
+  z-index: 2; /* Content appears on top of tint */
+} 
+/* 
+/* Features Section with Light Tint */
+ .features {
+  position: relative;
+  background-image: url("images/garlic.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  /* color: white; */
+} 
+
+ /* .features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 23, 23, 0.5); /* Light tint */
+  /* z-index: 1;   */
+  /* Keeps tint below content */
+
+/* }  */
+
+/* .features h2,h3, .features p {
+  position: relative;
+  z-index: 2; /* Content appears on top of tint */
+  /* color: white; */
+/* }  */
+  
+
+
+/* NAV */
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  /* padding: 30px 20px; */
+  margin-bottom: 10px;
+  
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+ 
+}
+
+nav ul li a {
+  /* color: #fff; */
+ 
+  color: black;
+  text-decoration: none;
+  /* background-color: #fff; */
+
+
+}
+
+
+nav ul li a.join-now {
+  /* background-color: #fff; */
+  color: black;
+  /* padding: 10px 20px; */
+  border-radius: 5px;
+  
+
+}
+
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
+/* Make the referral feature section stand out */
+.referral-feature {
+  background-color: #5ef45e; /* A vibrant yellow color to stand out */
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  }
+  
+  .referral-feature:hover {
+  transform: scale(1.05); /* Add a zoom effect on hover */
+  }
+  
+  .referral-feature img {
+  width: 100px; /* Resize the icon */
+  margin-bottom: 10px;
+  }
+  
+  .referral-feature h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+  }
+  
+  .referral-feature p {
+  font-size: 1.2rem;
+  color: #555;
+  }
+  
+  .cta-button-referral {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  }
+  
+  .cta-button-referral:hover {
+  background-color: #555; /* Darker color on hover */
+  }
+  
+  
+  
+/* Features Section */
+/* .features {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+} */
+
+/* .features h2 {
+  margin-bottom: 20px;
+} */
+
+/* Applying the standout design to individual feature items */
+/* .feature {
+  display: inline-block;
+  background: transparent;  */
+  /* Keep transparent to use standout-section styling */
+  /* margin: 10px;
+  width: 180px;  */
+  /* Fixed width for consistency */
+/* }  */
+
+
+
+
+
+
+/* Features Section */
+.features {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  }
+  
+  .features h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #18c870;
+  }
+  
+  .features .feature {
+  display: inline-block;
+  width: 280px;
+  margin: 20px;
+  text-align: center;
+  }
+  
+  .features .feature img {
+  /* width: 80px;
+  margin-bottom: 20px; */
+  }
+  
+  .features .feature h3 {
+  /* font-size: 1.5em;
+  margin-bottom: 15px;
+   color: #333; 
+   color: white;  */
+  } 
+  
+  /* .features .feature p {
+  font-size: 1em; */
+  /* color: #666; */
+  /* color: whitesmoke */
+  
+  /* }  */
+  
+  
+  
+  
+  
+  
+/* New Style for the features section */
+.features h2{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.feature {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.feature img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color:black;
+}
+
+.feature p {
+  font-size: 1em;
+  margin: 10px 0;
+  color:black;
+}
+
+.feature:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 90%;
+  }
+}
+
+/* Special style for the referral feature */
+.referral-feature {
+  background-color: #f0f8ff;
+  border: 2px solid #007bff;
+}
+
+.cta-button-referral {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button-referral:hover {
+  background-color: #0056b3;
+}
+
+/* ---------------------- */
+
+
+/* Features Section */
+.features {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Centering the h2 */
+.features h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #18c870;
+}
+
+/* Feature box styling */
+.features .feature {
+  display: inline-block;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px; /* Fixed width */
+  height: 324px; /* Fixed height */
+  margin: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure content stays inside the box */
+}
+
+.features .feature img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.features .feature h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.features .feature p {
+  font-size: 1em;
+  margin: 10px 0;
+  color: black;
+}
+
+/* Add hover effect */
+.features .feature:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 90%;
+    height: auto; /* Allow dynamic height for smaller screens */
+  }
+}
+
+/* Special style for the referral feature */
+.referral-feature {
+  background-color: #f0f8ff;
+  border: 2px solid #007bff;
+}
+
+/* CTA Button Styling */
+.cta-button-referral {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button-referral:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+/* Newest Features Section */
+.features {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap; /* Ensure the feature divs wrap properly */
+  justify-content: center;
+  gap: 20px; /* Space between feature divs */
+}
+
+.features h2 {
+  font-size: 2.5em;
+  width: 100%;
+  margin-bottom: 40px;
+  color: #18c870;
+  text-align: center;
+}
+
+/* Feature box styling */
+.feature {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px; /* Fixed width */
+  height: auto; /* Remove fixed height */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.features .feature img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.features .feature h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.features .feature p {
+  font-size: 1em;
+  margin: 10px 0;
+  color: black;
+}
+
+.feature:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column; /* Stack the feature boxes vertically */
+    align-items: center;
+  }
+
+  .feature {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}
+
+/* Special style for the referral feature */
+.referral-feature {
+  background-color: #f0f8ff;
+  border: 2px solid #007bff;
+}
+
+.cta-button-referral {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button-referral:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* Features Section */
+.features {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+  height: auto; /* Adjust the height based on content */
+}
+
+.features h2 {
+  font-size: 32px;
+  color: #18c870;
+  margin-bottom: 10px;
+}
+
+.features p {
+  font-size: 18px;
+  color: #18c870;
+  margin-bottom: 30px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: #f4f4f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+
+
+/* ----------------------- */
+
+/* Sponsor Section */
+.sponsors {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+  height: 600px;
+}
+
+.sponsors h2 {
+  font-size: 32px;
+  color: #18c870;
+  /* color: #333; */
+  margin-bottom: 10px;
+}
+
+.sponsors p {
+  font-size: 18px;
+  color: #18c870;
+  /* color: #666; */
+  margin-bottom: 30px;
+}
+
+
+
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.sponsor-card {
+  background-color: #f4f4f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.sponsor-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.sponsor-card p {
+  font-size: 16px;
+  color: #333;
+}
+
